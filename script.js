@@ -6,7 +6,7 @@ let searchResults = [];
 
 button.addEventListener("click", function() {
 	if (input.value === "") {
-    result.textContent = "Zadej hledaný výraz.";
+    result.textContent = "Perform a search request first";
     return;
 }
 	result.innerHTML = "";
