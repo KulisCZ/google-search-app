@@ -13,7 +13,7 @@ button.addEventListener("click", function() {
     fetch("/search?query=" + input.value)
         .then(function(response) {
 			if (!response.ok) {
-			throw new Error("Chyba při vyhledávání.");
+			throw new Error("Error during search");
     }
 
     return response.json();
@@ -33,13 +33,13 @@ button.addEventListener("click", function() {
         })
 		.catch(function(error) {
 		console.log(error);
-		result.textContent = "Něco se pokazilo.";
+		result.textContent = "Something went wrong";
 	});
 });
 
 saveButton.addEventListener("click", function() {
 	if (searchResults.length === 0) {
-    result.textContent = "Nejdříve vyhledej nějaký výraz.";
+    result.textContent = "Perform a search request first";
     return;
 }
 	

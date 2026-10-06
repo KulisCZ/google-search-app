@@ -42,4 +42,4 @@ def search(query):
         result = response.json()
         return result["organic"]
     except Exception:
-        raise HTTPException(status_code=500, detail="Chyba při vyhledávání.")
+        raise HTTPException(status_code=500, detail="Error during search")
