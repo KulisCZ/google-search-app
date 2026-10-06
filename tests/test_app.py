@@ -23,6 +23,8 @@ def test_search():
         response = client.get("/search?query=windows")
         assert response.status_code == 200
         assert response.json() == fake_response["organic"]
+        assert len(response.json()) <= 10
+        assert all("title" in item and "link" in item and "snippet" in item for item in response.json())
         
 def test_search_error():
     with patch("app.requests.post") as mock_post:

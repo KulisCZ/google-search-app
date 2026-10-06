@@ -27,7 +27,9 @@ def search(query):
     }
 
     data = {
-        "q": query
+        "q": query,
+        "num": 10,
+        "page": 1
     }
 
     response = requests.post(
