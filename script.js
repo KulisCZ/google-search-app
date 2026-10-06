@@ -6,7 +6,7 @@ let searchResults = [];
 
 button.addEventListener("click", function() {
 	if (input.value === "") {
-    result.textContent = "Perform a search request first";
+    result.textContent = "Enter a term in searchbox first";
     return;
 }
 	result.innerHTML = "";
@@ -39,7 +39,7 @@ button.addEventListener("click", function() {
 
 saveButton.addEventListener("click", function() {
 	if (searchResults.length === 0) {
-    result.textContent = "Perform a search request first";
+    result.textContent = "Enter a term in searchbox first";
     return;
 }
 	
