@@ -28,7 +28,6 @@ def search(query):
 
     data = {
         "q": query,
-        "num": 10,
         "page": 1
     }
 
